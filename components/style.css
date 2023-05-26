@@ -1,1 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+*{
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+button{
+    background: transparent;
+    border: none;
+}
+button:focus {
+    outline: none !important;
+}
+
+html, body {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Lato, sans-serif !important;
+}
+
+.custom__body {
+    background-image: url(https://i.imgur.com/80i9vQ6.png); 
+    overflow: hidden;
+}
+
+.custom__wrapper {
+    width: 100vw; 
+    height: 100vh; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom__container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 40px 30px; 
+    background: #000; 
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+
+.custom__container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.custom__title {
+    font-size: 40px; 
+    font-weight: 700;
+    margin-bottom: 50px; 
+    color: #fff;
+}
+
+.custom__buttons {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 480px;
+}
+
+.custom__buttons--yes,
+.custom__buttons--no {
+    text-decoration: none;
+    width: 200px; 
+    height: 50px; 
+    font-size: 24px; 
+    font-weight: 700; 
+    color: #000; 
+    background: #fff; 
+    border: none; 
+    border-radius: 10px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 10px;
+    transition: all .3s;
+}
+
+.custom__buttons .custom__buttons--yes:hover {
+    text-decoration: none;
+    color: #fff;
+    background: green;
+}
+
+@media screen and (max-width:991px) {
+    .custom__body {
+        background-image: url(https://i.imgur.com/A6A22PD.png);
+    }
+
+    .custom__container {
+        padding: 40px;
+    }
+
+    .custom__title {
+        font-size: 25px; 
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .custom__buttons {
+        flex-direction: column;
+        width: auto;
+        position: relative;
+    }
+
+    .custom__buttons--yes,
+    .custom__buttons--no {
+        margin: 0;
+        height: 40px;
+        font-size: 18px;
+        width: 150px;
+    }
+
+    .custom__buttons--yes {
+        margin-bottom: 55px;
+    }
+
+    .custom__buttons--no {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
