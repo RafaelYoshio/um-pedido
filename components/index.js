@@ -8,6 +8,6 @@ if ($(window).width() > 991) {
     });
 } else {
     $('.custom__buttons--no').click(function(){
-        $(this).css({"left": Math.random() * (window.outerWidth - 50) , "top": Math.random() * (window.outerHeight - 200), "position": "fixed", "background": "red", "color": "#fff"})
+        $(this).css({"display": "none"})
     });
 }
